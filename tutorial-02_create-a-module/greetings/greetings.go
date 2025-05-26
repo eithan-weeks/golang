@@ -8,10 +8,12 @@ import (
 
 func Hello(name string) (string, error) {
 	if name == "" {
-		return "", errors.New("empty name")
+		// return "", errors.New("empty name")
+		return "fail", errors.New("empty name")
 	}
 
-	message := fmt.Sprintf(randomFormat(), name)
+	// message := fmt.Sprintf(randomFormat(), name)
+	message := fmt.Sprintf(randomFormat(), "%v")
 	return message, nil
 }
 
